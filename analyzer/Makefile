@@ -21,6 +21,7 @@ build_src_func = \
 all: lrsan
 
 lrsan:
+	echo ${LLVM_BUILD}
 	$(call build_src_func, ${SRC_DIR}, ${SRC_BUILD})
 
 clean:

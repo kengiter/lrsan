@@ -35,8 +35,11 @@ LRC bug.
 
 * Replace error-code definition files of the Linux kernel with the ones
 in "encoded-errno"
-* The code should be compiled with the built LLVM.
+* The code should be compiled with the built LLVM
 * Compile the code with options: -O0 or -O2, -g, -fno-inline
+* Generate bitcode files
+	- We have our own tool to generate bitcode files: https://github.com/sslab-gatech/deadline/tree/release/work. Note that files (typically less than 10) with compilation errors are simply discarded
+	- There are multiple alternative tools such as LLVMLinux
 
 ### Run lrsan
 ```sh
